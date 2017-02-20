@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
+import NewsListContainer from './NewsFeedSample/NewsListContainer'
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {a:''}
-  }
-  update(){
-    this.setState(
-      { a: this.refs.a.value, b: this.refs.b.value}
-    )
-  }
   render(){
     return (
       <div>
-        <input ref="a" type="text" onChange={this.update.bind(this)}/>
-        {this.state.a}
+        <NewsListContainer source="the-next-web" sortBy="latest" />
         <hr />
-        <input ref="b" type="text" onChange={this.update.bind(this)}/>
-        {this.state.b}
+        <NewsListContainer source="bbc-news" sortBy="top" />
+        <hr />
+        <NewsListContainer source="buzzfeed" sortBy="top" />
+        <hr />
+        <NewsListContainer source="mashable" sortBy="top" />
+        <hr />
+        <NewsListContainer source="hacker-news" sortBy="top" />
       </div>
     )
   }

@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppHoc from './AppHoc';
+import App from './App';
+//import NormalizeEvents from './NormalizeEvents';
 
 ReactDOM.render(
-  <AppHoc />,
+  <App />,  //App
+  //<AppHOC />, //HOC
+  //<NormalizeEvents />,  //NormalizeEvent
   document.getElementById('root')
 );
