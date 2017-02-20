@@ -13,7 +13,7 @@ class App extends Component {
         <hr />
         <NewsListContainer source="mashable" sortBy="top" />
         <hr />
-        <NewsListContainer source="hacker-news" sortBy="top" />
+        <NewsListContainer source="techcrunch" sortBy="top" />
       </div>
     )
   }
