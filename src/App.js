@@ -1,20 +1,13 @@
 import React, { Component } from 'react';
 import NewsListContainer from './NewsFeedSample/NewsListContainer'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class App extends Component {
   render(){
     return (
-      <div>
-        <NewsListContainer source="the-next-web" sortBy="latest" />
-        <hr />
-        <NewsListContainer source="bbc-news" sortBy="top" />
-        <hr />
-        <NewsListContainer source="buzzfeed" sortBy="top" />
-        <hr />
-        <NewsListContainer source="mashable" sortBy="top" />
-        <hr />
-        <NewsListContainer source="techcrunch" sortBy="top" />
-      </div>
+      <MuiThemeProvider>
+        <NewsListContainer />        
+      </MuiThemeProvider>
     )
   }
 }
